@@ -11,8 +11,12 @@ body {
   --box-shadow--hover: 0px 80px 80px rgba(0, 0, 0, 0.39);
   margin: 0;
   font-family: Nunito, sans-serif;
-  display: flex;
-  justify-content: center;
+}
+
+.main-container-out {
+  width: auto;
+  max-width: 1450px;
+  margin: auto;
 }
 
 main {
@@ -51,7 +55,6 @@ pre {
 #root {
   background-color: var(--elements-color);
   color: var(--text-color);
-  min-width: 1500px;
 }
 
 header {

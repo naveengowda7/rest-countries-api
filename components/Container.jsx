@@ -5,8 +5,10 @@ import Header from "./Header";
 const Container = () => {
   return (
     <>
-      <Header />
-      <Outlet />
+      <div className="main-container-out">
+        <Header />
+        <Outlet />
+      </div>
     </>
   );
 };
