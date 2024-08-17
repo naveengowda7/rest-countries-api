@@ -136,6 +136,7 @@ li {
   border-radius: 0.25rem;
   padding: 0.5rem;
   background-color: var(--elements-color);
+  color: var(--text-color);
 }
 
 .search-bar input:focus {
