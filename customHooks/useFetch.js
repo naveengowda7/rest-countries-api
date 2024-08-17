@@ -1,14 +1,21 @@
+import { useState, useEffect } from "react";
+import { useLocalStorage } from "./useLocalStorage";
+
 export const useFetch = (url) => {
   const [data, setData] = useLocalStorage(url, null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+
   useEffect(() => {
+
     if (data !== null) {
-      console.log("Data retrieved from localStorage");
+      console.log("not fetched from the server")
       setLoading(false);
+
       return;
     }
+
 
     fetch(url)
       .then((res) => {
@@ -19,7 +26,8 @@ export const useFetch = (url) => {
       })
       .then((fetchedData) => {
         setData(fetchedData);
-        console.log("Data fetched from the server");
+        console.log("fetched from the server")
+        console.log("Fetched the country")
         setLoading(false);
       })
       .catch((error) => {
@@ -27,6 +35,8 @@ export const useFetch = (url) => {
         setLoading(false);
       });
   }, [url]);
+
+  console.log(data)
 
   return { data, loading, error };
 };
