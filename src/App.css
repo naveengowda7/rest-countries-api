@@ -19,6 +19,7 @@ main,
 header {
   background-color: var(--background-color);
   color: var(--text-color);
+  height: 100vh;
 }
 
 main.dark,
